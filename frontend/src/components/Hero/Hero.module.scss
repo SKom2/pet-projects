@@ -1,0 +1,35 @@
+@import "@/styles/mixins";
+
+.hero{
+
+  &__container{
+    padding: 140px 0 70px;
+    margin: 0 auto;
+    max-width: 855px;
+    @include displaySettings($justify: space-between, $align: start);
+  }
+
+  &__info{
+    @include displaySettings($direction: column, $gap: 40px, $align: start, $justify: start);
+    max-width: 497px;
+  }
+
+  &__greeting{
+    @include fontSet($fs: 44px, $fw: $Bold, $lh: 60px);
+  }
+
+  &__text{
+    @include fontSet($fs: 16px, $fw: $Medium, $lh: 23.5px);
+  }
+
+
+  &__profileImage{
+    border-radius: 50%;
+    box-shadow: -7px 11px 0px 0px rgb(237 247 250);
+    @include transitionSetting();
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

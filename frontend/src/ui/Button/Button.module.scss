@@ -1,0 +1,17 @@
+@import "@/styles/mixins";
+
+.button{
+  padding: 0;
+  cursor: pointer;
+  @include theme($buttonColor, $globalWhite);
+  @include borderSetting(none, 2px);
+  @include fontSet($fs: 20px);
+  @include size(208px, 47px);
+  @include transitionSetting();
+  @include displaySettings();
+
+  &:hover{
+    text-decoration: none;
+    box-shadow: 1px 1px 17px 5px $buttonColor;
+  }
+}

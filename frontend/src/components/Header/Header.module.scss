@@ -1,0 +1,31 @@
+@import "@/styles/mixins";
+
+.header{
+  max-height: 70px;
+
+  &__container{
+    max-width: 885px;
+    margin: 0 auto;
+  }
+
+  &__menu{
+    @include displaySettings($justify: end, $gap: 33px);
+    padding: 27px 0 0;
+
+    &_userName{
+      @include fontSet($fw: $Medium, $fs: 20px);
+      color: #00A8CC;
+    }
+
+    &_link{
+      color: $globalBlack;
+      @include fontSet($fw: $Medium, $fs: 20px);
+      @include transitionSetting();
+
+      &:hover{
+        opacity: .7;
+        text-decoration: none;
+      }
+    }
+  }
+}

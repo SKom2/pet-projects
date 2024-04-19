@@ -1,0 +1,32 @@
+@import "@/styles/mixins";
+
+
+.posts{
+  background-color: $screenBg;
+  padding: 32px 0;
+
+  &__container{
+    margin: 0 auto;
+    max-width: 855px;
+  }
+
+  &__heading{
+    @include displaySettings($justify: space-between);
+    margin-bottom: 20px;
+  }
+
+  &__title{
+    @include fontSet($fs: 22px, $lh: 23px);
+  }
+
+  &__all{
+    @include fontSet($fs: 16px, $lh: 23px);
+    color: #00A8CC;
+  }
+
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

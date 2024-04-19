@@ -1,0 +1,31 @@
+@import "@/styles/mixins";
+
+.post{
+  padding: 24px;
+  border-radius: 4px;
+  background-color: $globalWhite;
+  box-sizing: border-box;
+  height: 295px;
+
+  &__container{
+    @include displaySettings($direction: column, $gap: 17px, $align: start);
+  }
+
+  &__title{
+    @include fontSet($fs: 26px, $fw: $Bold, $lh: 38px);
+  }
+
+  &__info{
+    @include displaySettings($gap: 26px);
+    @include fontSet($fs: 18px, $lh: 26px);
+  }
+
+  &__line{
+    @include size(1px, 21px);
+    background-color: $globalBlack;
+  }
+
+  &__text{
+    @include fontSet($fs: 18px, $lh: 23.5px);
+  }
+}

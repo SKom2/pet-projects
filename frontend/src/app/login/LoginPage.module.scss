@@ -1,0 +1,23 @@
+@import "@/styles/mixins";
+
+
+.loginPage {
+  background-color: $screenBg;
+  height: 100%;
+
+  &__formWrapper {
+    background-color: $globalWhite;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+    top: 200px;
+    border-radius: 4px;
+  }
+}
+
+.formWrapper__title {
+  text-align: center;
+  @include fontSet($fs: 26px, $fw: $Bold);
+  margin-bottom: 50px;
+}

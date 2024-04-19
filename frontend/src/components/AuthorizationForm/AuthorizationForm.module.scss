@@ -1,0 +1,47 @@
+@import "@/styles/mixins";
+
+.form{
+  @include displaySettings($align: start, $direction: column, $gap: 20px);
+
+  &__title{
+    @include fontSet($fs: 44px, $fw: $Bold);
+  }
+
+  &__label{
+    @include displaySettings($align: start, $direction: column, $gap: 10px);
+    @include fontSet($fs: 24px, $fw: $Medium);
+    width: 100%;
+  }
+
+  &__input{
+    @include fontSet($fs: 18px);
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    @include borderSetting($border: $mainTextColor 1px solid, $radius: 2px);
+    padding-left: 6px;
+  }
+
+  &__error{
+    margin: 0 auto;
+    @include fontSet($fs: 16px, $fw: $Medium);
+    color: red;
+  }
+
+  &__button{
+    @include size(100%, 47px);
+    margin: 0 auto;
+  }
+
+  &__hint{
+    @include fontSet($fs: 16px, $fw: $Medium);
+    margin: 0 auto;
+  }
+
+  &__link{
+    color: #00A8CC;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

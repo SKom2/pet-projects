@@ -1,0 +1,45 @@
+@import "variables";
+
+/**
+  ------------- FONTS -------------
+ */
+
+
+@mixin fontSet($ff: $mainFont, $fs: 30px, $fw: $Regular, $lh: 20px, $fontStyle: normal) {
+  font-family: $ff !important;
+  font-size: $fs !important;
+  font-weight: $fw !important;
+  line-height: $lh !important;
+  font-style: $fontStyle !important;
+}
+
+/**
+  ------------- ADDITION MIXINS -------------
+ */
+
+@mixin theme($bg, $color) {
+  color: $color;
+  background-color: $bg;
+}
+
+@mixin displaySettings($display: flex, $align: center, $justify: center, $direction: row, $gap: 0) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin transitionSetting($transition: all 0.3s ease) {
+  transition: $transition;
+}
+
+@mixin borderSetting($border, $radius){
+  border: $border;
+  border-radius: $radius;
+}
+
+@mixin size($width, $height) {
+  width: $width !important;
+  height: $height;
+}
